@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #94a3b8;
+  font-family: "Poppins", sans-serif;
+}
+
+.searchBar {
+  background-color: #475569;
+  display: flex;
+  width: 300px;
+  height: 40px;
+  align-items: center;
+  margin: 50px auto 0 auto;
+  padding: 0 10px 0 5px;
+  border-radius: 6px;
+}
+
+.searchBar svg {
+  margin: 0 10px;
+  color: #f8fafc;
+}
+
+.searchBar input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: transparent;
+  background: transparent;
+  color: #f8fafc;
+}
+
+.searchBar input::placeholder {
+  color: #e2e8f0b7;
+}
+
+.produk-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.produk-list .headProduk h1 {
+  margin-left: 25px;
+  font-size: 35px;
+}
+
+.produk-list .headProduk p {
+  font-size: 12px;
+  margin-left: 30px;
+  color: #334155;
+}
+
+.produk-list .container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.container .produk {
+  border-radius: 6px;
+  margin: 20px 0;
+  width: 400px;
+  display: flex;
+  padding-right: 10px;
+  align-items: center;
+  background-color: #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.produk div:nth-child(2) {
+  padding: 5px;
+}
+
+.produk div:nth-child(2) img {
+  width: 110px;
+  height: 90px;
+  object-fit: fill;
+  margin: 5px 7px 0 5px;
+}
+
+.produk span {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  background-color: #6b7280;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.produk span p {
+  font-size: 13px;
+  color: #e2e8f0;
+}
+
+@media screen and (max-width: 576px) {
+  .searchBar {
+    width: 75%;
+  }
+
+  .produk-list .headProduk h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .produk-list .headProduk p {
+    text-align: center;
+    margin: 0;
+  }
+
+  .container .produk {
+    width: 90%;
+  }
+
+  .container .produk div:nth-child(2) img {
+    width: 80px;
+    height: 70px;
+  }
+}
