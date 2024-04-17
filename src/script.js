@@ -50,3 +50,8 @@ const sortProductsAlphabetically = function () {
   });
 };
  
+// Menangkap acara klik kanan pada dokumen
+document.addEventListener('contextmenu', function(event) {
+    // Mencegah perilaku bawaan dari klik kanan
+    event.preventDefault();
+});
