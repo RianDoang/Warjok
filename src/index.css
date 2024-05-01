@@ -5,20 +5,41 @@
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 13px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsla(214, 32%, 91%, 0.2);
+}
+
 body {
   background: #0f172a;
   font-family: "Poppins", sans-serif;
 }
 
 .searchBar {
-  background-color: #cbd5e1;
+  background-color: #bac4cf;
   display: flex;
-  width: 300px;
+  width: 200px;
   height: 40px;
   align-items: center;
   margin: 50px auto 0 auto;
   padding: 0 10px 0 5px;
   border-radius: 6px;
+  position: relative;
+  transition: 0.2s all ease-in-out;
+  outline: none;
+  border: transparent;
+  position: sticky;
+  top: 25px;
+}
+
+.searchBar:focus,
+.searchBar:focus-within {
+  width: 300px;
+  background-color: #cbd5e1;
 }
 
 .searchBar svg {
@@ -62,20 +83,18 @@ body {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: flex-start;
-  width: 96%;
-  margin: 0 auto;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
 }
 
 .container .produk {
-  width: 200px;
+  width: 250px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-end;
   padding: 8px 10px;
-  margin: 20px 0;
   border-radius: 6px;
   background-color: #334155;
   color: #f1f5f9;
@@ -86,14 +105,59 @@ body {
   width: 100%;
 }
 
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .produk div hr {
   margin: 2px 0;
   width: 100%;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .searchBar {
+    width: 25%;
+    background-color: #bac4cf;
+  }
+
+  .searchBar:focus,
+  .searchBar:focus-within {
+    width: 35%;
+    background-color: #cbd5e1;
+  }
+
+  .produk-list .headProduk {
+    margin-bottom: 15px;
+  }
+
+  .produk-list .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .container .produk {
+    width: 40%;
+    margin: 7px 0;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .searchBar {
-    width: 75%;
+    width: 40%;
+    background-color: #bac4cf;
+  }
+
+  .searchBar:focus,
+  .searchBar:focus-within {
+    width: 70%;
+    background-color: #cbd5e1;
+  }
+
+  .produk-list .headProduk {
+    margin-bottom: 15px;
   }
 
   .produk-list .headProduk h1 {
@@ -107,12 +171,13 @@ body {
     margin: 0;
   }
 
-  .container .produk {
-    width: 90%;
+  .produk-list .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .container .produk div:nth-child(2) img {
-    width: 80px;
-    height: 70px;
+  .container .produk {
+    width: 80%;
   }
 }
