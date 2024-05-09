@@ -7,7 +7,6 @@ const search = function () {
   for (var i = 0; i < pname.length; i++) {
     let match = produk[i].getElementsByTagName("h3")[0];
 
-
     if (match) {
       let textValue = match.textContent || match.innerHTML;
 
@@ -49,9 +48,10 @@ const sortProductsAlphabetically = function () {
     produkContainer.appendChild(item);
   });
 };
- 
-// Menangkap acara klik kanan pada dokumen
-document.addEventListener('contextmenu', function(event) {
-    // Mencegah perilaku bawaan dari klik kanan
-    event.preventDefault();
+
+// Shortcut untuk button search
+document.addEventListener("keydown", function (event) {
+  if (event.altKey && event.key === "r") {
+    document.querySelector(".searchBar input").focus();
+  }
 });
